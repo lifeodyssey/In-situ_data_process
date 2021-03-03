@@ -41,23 +41,23 @@ AP_S5 = {'Sample': ['A0916S51', 'A0916S52'],
          'Vol': 200,
          'Diameter': [22.69, 22.71, 22.67]}
 
-# AP_S6 = {'Sample': ['A0916S61', 'A0916S62'],
-#          'Before Blank': ['A0916B67', 'A0916B68'],
-#          'After Blank': ['A0916B69', 'A0916B610'],
-#          'Vol': 150,
-#          'Diameter': [22.42, 22.37, 21.39]}
-#
-# AP_S7 = {'Sample': ['A0916S71', 'A0916S72'],
-#          'Before Blank': ['A0916B15', 'A0916B16'],
-#          'After Blank': ['A0916B17', 'A0916B18'],
-#          'Vol': 150,
-#          'Diameter': [22.36, 22.40, 21.44]}
-#
-# AP_S8 = {'Sample': ['A0916S81', 'A0916S82'],
-#          'Before Blank': ['A0916B17', 'A0916B18'],
-#          'After Blank': ['A0916B19', 'A0916B20'],
-#          'Vol': 150,
-#          'Diameter': [22.35, 22.42, 21.36]}
+AP_S6 = {'Sample': ['A0916S61', 'A0916S62'],
+         'Before Blank': ['A0916B7', 'A0916B8'],
+         'After Blank': ['A0916B9', 'A0916B10'],
+         'Vol': 150,
+         'Diameter': [22.57, 22.70, 22.72]}
+
+AP_S7 = {'Sample': ['A0916S71', 'A0916S71'],
+         'Before Blank': ['A0916B9', 'A0916B10'],
+         'After Blank': ['A0916B15', 'A0916B16'],
+         'Vol': 150,
+         'Diameter': [22.87, 22.69, 21.65]}
+
+AP_S8 = {'Sample': ['A0916S81', 'A0916S83'],
+         'Before Blank': ['A0916B25', 'A0916B26'],
+         'After Blank': ['A0916B35', 'A0916B36'],
+         'Vol': 150,
+         'Diameter': [22.53, 22.27, 22.74]}
 
 
 AD_S1 = {'Sample': ['D0916S11', 'D0916S12'],
@@ -80,36 +80,36 @@ AD_S5 = {'Sample': ['D0916S51', 'D0916S52'],
          'Before Blank': ['D0916B41', 'D0916B41'],
          'After Blank': ['D0916B51', 'D0916B51'], }
 
-# AD_S6 = {'Sample': ['D0916S63', 'D0916S64'],
-#          'Before Blank': ['D0916B19', 'D0916B20'],
-#          'After Blank': ['D0916B21', 'D0916B22'], }
-#
-# AD_S7 = {'Sample': ['D0916S71', 'D0916S72'],
-#          'Before Blank': ['D0916B23', 'D0916B24'],
-#          'After Blank': ['D0916B25', 'D0916B26'], }
-#
-# AD_S8 = {'Sample': ['D0916S81', 'D0916S82'],
-#          'Before Blank': ['D0916B25', 'D0916B26'],
-#          'After Blank': ['D0916B27', 'D0916B28'], }
+AD_S6 = {'Sample': ['D0916S61', 'D0916S62'],
+         'Before Blank': ['D0916B61', 'D0916B61'],
+         'After Blank': ['D0916B62', 'D0916B62'], }
+
+AD_S7 = {'Sample': ['D0916S71', 'D0916S72'],
+         'Before Blank': ['D0916B71', 'D0916B71'],
+         'After Blank': ['D0916B72', 'D0916B72'], }
+
+AD_S8 = {'Sample': ['D0916S81', 'D0916S82'],
+         'Before Blank': ['D0916B72', 'D0916B72'],
+         'After Blank': ['D0916B82', 'D0916B82'], }
 
 
 ap_list = [AP_S1,
            AP_S2,
            AP_S3,
            AP_S4,
-           AP_S5,]
-           # AP_S6,
-           # AP_S7,
-           # AP_S8, ]
+           AP_S5,
+           AP_S6,
+           AP_S7,
+           AP_S8, ]
 
 ad_list = [AD_S1,
            AD_S2,
            AD_S3,
            AD_S4,
-           AD_S5,]
-           # AD_S6,
-           # AD_S7,
-           # AD_S8, ]
+           AD_S5,
+           AD_S6,
+           AD_S7,
+           AD_S8, ]
 
 ap_bacth, area_list, vol_list = ap_ad_aph.ap_batch(ap_path=ap_path, aplist=ap_list, filename='0916ap')
 ad_batch = ap_ad_aph.ad_batch(ad_path=ad_path, adlist=ad_list, filename='0916ad', area_list=area_list, vol_list=vol_list)
