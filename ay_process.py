@@ -1,45 +1,45 @@
 from IADP import ay
 
-path = '/Users/zhenjia/Desktop/Airka_Reprocess/Ariake/2016/2016.02.10/ay/'
+path = '/Users/zhenjia/Desktop/Airka_Reprocess/Ariake/2016/2016.03.08/ay/'
 # output_path = '/Users/zhenjia/Desktop/Airka_Reprocess/Ariake/2015/2015.08.06/'
 
-Station1 = {'Sample': ['C0210S11', 'C0210S12'],
-            'Before Blank': ['C0210B11', 'C0210B12'],
-            'After Blank': ['C0210B21', 'C0210B22'], }
-Station2 = {'Sample': ['C0210S21', 'C0210S21'],
-            'Before Blank': ['C0210B11', 'C0210B12'],
-            'After Blank': ['C0210B21', 'C0210B22'], }
-Station3 = {'Sample': ['C0210S31', 'C0210S32'],
-            'Before Blank': ['C0210B11', 'C0210B12'],
-            'After Blank': ['C0210B21', 'C0210B22'], }
-Station4 = {'Sample': ['C0210S41', 'C0210S42'],
-            'Before Blank': ['C0210B11', 'C0210B12'],
-            'After Blank': ['C0210B21', 'C0210B22'], }
-# Station5 = {'Sample': ['C0210S51', 'C0210S52'],
-#             'Before Blank': ['C0210B11', 'C0210B12'],
-#             'After Blank': ['C0210B21', 'C0210B22'], }
+Station1 = {'Sample': ['C0308S11', 'C0308S12'],
+            'Before Blank': ['C0308_B1', 'C0308_B2'],
+            'After Blank': ['C0308_R3', 'C0308_R4'], }
+Station2 = {'Sample': ['C0308S21', 'C0308S21'],
+            'Before Blank': ['C0308_B1', 'C0308_B2'],
+            'After Blank': ['C0308_R3', 'C0308_R4'], }
+Station3 = {'Sample': ['C0308S31', 'C0308S32'],
+            'Before Blank': ['C0308_B1', 'C0308_B2'],
+            'After Blank': ['C0308_R3', 'C0308_R4'], }
+Station4 = {'Sample': ['C0308S41', 'C0308S42'],
+            'Before Blank': ['C0308_B1', 'C0308_B2'],
+            'After Blank': ['C0308_R3', 'C0308_R4'], }
+Station5 = {'Sample': ['C0308S51', 'C0308S52'],
+            'Before Blank': ['C0308_B1', 'C0308_B2'],
+            'After Blank': ['C0308_R3', 'C0308_R4'], }
 
-Station6 = {'Sample': ['C0210S61', 'C0210S62'],
-            'Before Blank': ['C0210B11', 'C0210B12'],
-            'After Blank': ['C0210B21', 'C0210B22'], }
+Station6 = {'Sample': ['C0308S61', 'C0308S62'],
+            'Before Blank': ['C0308_B1', 'C0308_B2'],
+            'After Blank': ['C0308_R3', 'C0308_R4'], }
 
-Station7 = {'Sample': ['C0210S71', 'C0210S72'],
-            'Before Blank': ['C0210B11', 'C0210B12'],
-            'After Blank': ['C0210B21', 'C0210B22'], }
+Station7 = {'Sample': ['C0308S71', 'C0308S72'],
+            'Before Blank': ['C0308_B1', 'C0308_B2'],
+            'After Blank': ['C0308_R3', 'C0308_R4'], }
 
-# Station8 = {'Sample': ['C0210S71', 'C0210S72'],
-#             'Before Blank': ['C0210B21', 'C0210B22'],
-#             'After Blank': ['C0210B31', 'C0210B32'], }
-Station9 = {'Sample': ['C0210S91', 'C0210S92'],
-            'Before Blank': ['C0210B11', 'C0210B12'],
-            'After Blank': ['C0210B21', 'C0210B22'], }
-Station10 = {'Sample': ['C210S101', 'C210S102'],
-            'Before Blank': ['C0210B11', 'C0210B12'],
-            'After Blank': ['C0210B21', 'C0210B22'], }
+# Station8 = {'Sample': ['C0308S71', 'C0308S72'],
+#             'Before Blank': ['C0308B21', 'C0308B22'],
+#             'After Blank': ['C0308B31', 'C0308B32'], }
+Station9 = {'Sample': ['C0308S91', 'C0308S92'],
+            'Before Blank': ['C0308_B1', 'C0308_B2'],
+            'After Blank': ['C0308_R3', 'C0308_R4'], }
+Station10 = {'Sample': ['C0308101', 'C0308102'],
+             'Before Blank': ['C0308_B1', 'C0308_B2'],
+             'After Blank': ['C0308_R3', 'C0308_R4'], }
 
-Station11 = {'Sample': ['C210S111', 'C210S111'],
-            'Before Blank': ['C0210B11', 'C0210B12'],
-            'After Blank': ['C0210B21', 'C0210B22'], }
+Station11 = {'Sample': ['C0308111', 'C0308112'],
+             'Before Blank': ['C0308_B1', 'C0308_B2'],
+             'After Blank': ['C0308_R3', 'C0308_R4'], }
 
 S_list = [Station1,
           Station2,
@@ -54,4 +54,4 @@ S_list = [Station1,
           Station11,
           ]
 
-ay.ay_bacth(path, S_list, '0210ay', )
+ay.ay_bacth(path, S_list, '0308ay', )
