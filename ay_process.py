@@ -19,21 +19,23 @@ Station5 = {'Sample': ['CISZK51', 'CISZK52'],
             'Before Blank': ['R0826_1', 'R0826_2'],
             'After Blank': ['R0826_3', 'R0826_4'], }
 
-Station6 = {'Sample': ['CISZK61', 'CISZK62'],
+Station6 = {'Sample': ['CISZK121', 'CISZK122'],
             'Before Blank': ['R0826_1', 'R0826_2'],
             'After Blank': ['R0826_3', 'R0826_4'], }
 
-Station7 = {'Sample': ['CISZK71', 'CISZK72'],
+Station7 = {'Sample': ['CISZK61', 'CISZK62'],
             'Before Blank': ['R0826_1', 'R0826_2'],
             'After Blank': ['R0826_3', 'R0826_4'], }
 
-Station8 = {'Sample': ['CISZK71', 'CISZK72'],
+Station8 = {'Sample': ['CISZK91', 'CISZK92'],
             'Before Blank': ['R0826_1', 'R0826_2'],
             'After Blank': ['R0826_3', 'R0826_4'], }
-Station9 = {'Sample': ['CISZK91', 'CISZK92'],
+
+Station9 = {'Sample': ['CISZK71', 'CISZK72'],
             'Before Blank': ['R0826_1', 'R0826_2'],
             'After Blank': ['R0826_3', 'R0826_4'], }
-Station10 = {'Sample': ['CISZK121', 'CISZK122'],
+
+Station10 = {'Sample': ['CISZK81', 'CISZK82'],
              'Before Blank': ['R0826_1', 'R0826_2'],
              'After Blank': ['R0826_3', 'R0826_4'], }
 #
@@ -52,6 +54,5 @@ S_list = [Station1,
           Station9,
           Station10,
           ]
-
 
 ay.ay_bacth(path, S_list, 'ISZKay', )
