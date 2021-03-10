@@ -136,7 +136,6 @@ ap_list = [
     AP_S6,
     AP_S9,
     AP_S7,
-    AP_S12,
     AP_S8,
 ]
 
@@ -150,7 +149,6 @@ ad_list = [
     AD_S6,
     AD_S9,
     AD_S7,
-    AD_S12,
     AD_S8,
 
 ]
