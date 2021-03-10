@@ -8,107 +8,105 @@ ap_path = '/Users/zhenjia/Desktop/Airka_Reprocess/Ariake/2016/2016.08.24/IOP-201
 ad_path = '/Users/zhenjia/Desktop/Airka_Reprocess/Ariake/2016/2016.08.24/IOP-20160824/ad/'
 # output_path = '/Users/zhenjia/Desktop/Airka_Reprocess/Ariake/2015/2015.09.16/'
 
-AP_S1 = {'Sample': ['C0308S11', 'C0308S12'],
-         'Before Blank': ['B0308_B1', 'A0308_B2'],
-         'After Blank': ['C0308B3', 'C0308B4'],
+AP_S1 = {'Sample': ['S082411', 'S082412'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'],
          'Vol': 150,
-         'Diameter': [22.07, 22.22, 22.37]}
+         'Diameter': [21.87, 21.52, 21.94]}
 
-AP_S2 = {'Sample': ['C0308S21', 'C0308S22'],
-         'Before Blank': ['C0308B3', 'C0308B4'],
-         'After Blank': ['C0308B5', 'C0308B6'],
+AP_S2 = {'Sample': ['S082421', 'S082422'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'],
          'Vol': 150,
-         'Diameter': [22.63, 22.41, 22.56]}
+         'Diameter': [21.93, 21.65, 21.66]}
 
-AP_S3 = {'Sample': ['C0308S31', 'C0308S32'],
-         'Before Blank': ['C0308B7', 'C0308B8'],
-         'After Blank': ['C0308B9', 'C308B10'],
+AP_S3 = {'Sample': ['S082431', 'S082432'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'],
          'Vol': 150,
-         'Diameter': [22.54, 22.09, 22.22]}
+         'Diameter': [21.80, 21.79, 21.80]}
 
-AP_S4 = {'Sample': ['C0308S41', 'C0308S42'],
-         'Before Blank': ['C0308B7', 'C0308B8'],
-         'After Blank': ['C0308B9', 'C308B10'],
+AP_S4 = {'Sample': ['S082441', 'S082442'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'],
          'Vol': 150,
-         'Diameter': [22.31, 22.50, 22.57]}
+         'Diameter': [21.24, 21.70, 21.68]}
 
-AP_S5 = {'Sample': ['C0308S52', 'C0308S52'],
-         'Before Blank': ['C0308B7', 'C0308B8'],
-         'After Blank': ['C0308B9', 'C308B10'],
+AP_S5 = {'Sample': ['S082451', 'S082452'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'],
          'Vol': 150,
-         'Diameter': [22.38, 22.36, 22.73]}
+         'Diameter': [21.43, 21.30, 21.75]}
 
-AP_S6 = {'Sample': ['C0308S61', 'C0308S62'],
-         'Before Blank': ['C0308B9', 'C308B10'],
-         'After Blank': ['C308B11', 'C308B12'],
+AP_S6 = {'Sample': ['S082461', 'S082462'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'],
          'Vol': 150,
-         'Diameter': [22.71, 22.67, 22.38]}
+         'Diameter': [21.82, 21.84, 21.40]}
 
-AP_S7 = {'Sample': ['C308S71', 'C0308S72'],
-         'Before Blank': ['C308B21', 'C308B22'],
-         'After Blank': ['C308B31', 'C308B32'],
+AP_S7 = {'Sample': ['S082471', 'S082472'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'],
          'Vol': 150,
-         'Diameter': [21.98, 22.08, 22.39]}
-AP_S8 = {'Sample': ['C308S71', 'C0308S72'],
-         'Before Blank': ['C308B21', 'C308B22'],
-         'After Blank': ['C308B31', 'C308B32'],
-         'Vol': 150,
-         'Diameter': [21.98, 22.08, 22.39]}
+         'Diameter': [21.40, 21.40, 21.42]}
 
-AP_S9 = {'Sample': ['C0308S91', 'C0308S92'],
-         'Before Blank': ['C308B21', 'C308B22'],
-         'After Blank': ['C308B31', 'C308B32'],
+AP_S8 = {'Sample': ['S082481', 'S082482'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'],
          'Vol': 150,
-         'Diameter': [22.42, 22.22, 22.18]}
+         'Diameter': [22.05, 22.36, 22.36]}
 
-AP_S12 = {'Sample': ['C308S101', 'C308S102'],
-          'Before Blank': ['C308B21', 'C308B22'],
-          'After Blank': ['C308B31', 'C308B32'],
+AP_S9 = {'Sample': ['S082491', 'S082492'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'],
+         'Vol': 150,
+         'Diameter': [22.36, 22.52, 22.47]}
+
+AP_S12 = {'Sample': ['S0824121', 'S0824122'],
+          'Before Blank': ['B0824-1', 'B0824-2'],
+          'After Blank': ['B0824-3', 'B0824-4'],
           'Vol': 150,
-          'Diameter': [22.17, 22.30, 22.24]}
+          'Diameter': [21.96, 21.52, 21.50]}
 
+AD_S1 = {'Sample': ['S082411', 'S082412'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'], }
 
+AD_S2 = {'Sample': ['S082421', 'S082422'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'], }
 
-AD_S1 = {'Sample': ['D0308S11', 'D0308S12'],
-         'Before Blank': ['D0308B11', 'D0308B12'],
-         'After Blank': ['D0308B21', 'D0308B22'], }
+AD_S3 = {'Sample': ['S082431', 'S082432'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'], }
 
-AD_S2 = {'Sample': ['D0308S21', 'D0308S22'],
-         'Before Blank': ['D0308B11', 'D0308B12'],
-         'After Blank': ['D0308B21', 'D0308B22'], }
+AD_S4 = {'Sample': ['S082441', 'S082442'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'], }
 
-AD_S3 = {'Sample': ['D0308S31', 'D0308S32'],
-         'Before Blank': ['D0308B11', 'D0308B12'],
-         'After Blank': ['D0308B21', 'D0308B22'], }
+AD_S5 = {'Sample': ['S082451', 'S082452'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'], }
 
-AD_S4 = {'Sample': ['D0308S41', 'D0308S42'],
-         'Before Blank': ['D0308B21', 'D0308B22'],
-         'After Blank': ['D0308B31', 'D0308B32'], }
+AD_S6 = {'Sample': ['S082461', 'S082462'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'], }
 
-AD_S5 = {'Sample': ['D0308S51', 'D0308S52'],
-         'Before Blank': ['D0308B31', 'D0308B32'],
-         'After Blank': ['D0308B51', 'D0308B52'], }
+AD_S7 = {'Sample': ['S082471', 'S082472'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'], }
 
-AD_S6 = {'Sample': ['D0308S61', 'D0308S62'],
-         'Before Blank': ['D0308B31', 'D0308B32'],
-         'After Blank': ['D0308B51', 'D0308B52'], }
+AD_S8 = {'Sample': ['S082481', 'S082482'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'], }
 
-AD_S7 = {'Sample': ['D0308S71', 'D0308S72'],
-         'Before Blank': ['D0308B31', 'D0308B32'],
-         'After Blank': ['D0308B51', 'D0308B52'], }
+AD_S9 = {'Sample': ['S082491', 'S082492'],
+         'Before Blank': ['B0824-1', 'B0824-2'],
+         'After Blank': ['B0824-3', 'B0824-4'], }
 
-AD_S8 = {'Sample': ['D0308S81', 'D0308S82'],
-         'Before Blank': ['D0308B72', 'D0308B72'],
-         'After Blank': ['D0308B82', 'D0308B82'], }
-
-AD_S9 = {'Sample': ['D0308S91', 'D0308S92'],
-         'Before Blank': ['D0308B61', 'D0308B62'],
-         'After Blank': ['D0308B71', 'D0308B72'], }
-
-AD_S12 = {'Sample': ['D308S101', 'D308S102'],
-          'Before Blank': ['D0308B61', 'D0308B62'],
-          'After Blank': ['D0308B71', 'D0308B72'], }
-
+AD_S12 = {'Sample': ['S0824121', 'S0824122'],
+          'Before Blank': ['B0824-1', 'B0824-2'],
+          'After Blank': ['B0824-3', 'B0824-4'], }
 
 '''
 顺序
@@ -127,7 +125,6 @@ Station ISZK
  前面标记的StationXXX实际上是ISZK XXX
  表里的顺序是按照ISZK的上面的那个顺序（而非标号的顺序）来的
 '''
-
 
 ap_list = [
     AP_S1,
@@ -149,14 +146,16 @@ ad_list = [
     AD_S3,
     AD_S4,
     AD_S5,
+    AD_S12,
     AD_S6,
-    AD_S7,
     AD_S9,
-    AD_S10,
-    AD_S11,
+    AD_S7,
+    AD_S12,
+    AD_S8,
+
 ]
 
-ap_bacth, area_list, vol_list = ap_ad_aph.ap_batch(ap_path=ap_path, aplist=ap_list, filename='0308ap')
-ad_batch = ap_ad_aph.ad_batch(ad_path=ad_path, adlist=ad_list, filename='0308ad', area_list=area_list,
+ap_bacth, area_list, vol_list = ap_ad_aph.ap_batch(ap_path=ap_path, aplist=ap_list, filename='0824ap')
+ad_batch = ap_ad_aph.ad_batch(ad_path=ad_path, adlist=ad_list, filename='0824ad', area_list=area_list,
                               vol_list=vol_list)
-ap_ad_aph.aph_cal_plot(ap_batch=ap_bacth, ad_batch=ad_batch, savepath=ap_path, fname='0308aph')
+ap_ad_aph.aph_cal_plot(ap_batch=ap_bacth, ad_batch=ad_batch, savepath=ap_path, fname='0824aph')
