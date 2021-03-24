@@ -183,7 +183,7 @@ x_ay = np.arange(800, 299, -1)
 find = lambda k, wavelength: np.abs(wavelength - k).argmin()  # Index of closest wavelength
 key = lambda k, wavelength: wavelength[find(k, wavelength)]  # Value of closest wavelength
 Rrs_wave = np.arange(350, 752, 2)
-SGLI_wave_vis = [380, 412, 443, 490, 530, 565, 674]
+SGLI_wave_vis = [380, 412, 443, 490, 530, 565, 672]
 
 # ### Hyperspectral
 
@@ -250,7 +250,7 @@ SGLI_Rrs_Ariake = {'380': Rrs_Ariake[380.0],
                    '490': Rrs_Ariake[490.0],
                    '530': Rrs_Ariake[530.0],
                    '565': (Rrs_Ariake[564.0] + Rrs_Ariake[566.0]) / 2,
-                   '674': Rrs_Ariake[674.0],
+                   '672': Rrs_Ariake[672.0],
                    }
 SGLI_Rrs_Ariake = pd.DataFrame(SGLI_Rrs_Ariake)
 SGLI_Rrs_Ariake = SGLI_Rrs_Ariake.to_numpy()
@@ -260,7 +260,7 @@ aph_measu_SGLI_Ariake = np.asarray([Ariake_hyper_aph[find(380, Rrs_wave), :],
                                     Ariake_hyper_aph[find(490, Rrs_wave), :],
                                     Ariake_hyper_aph[find(530, Rrs_wave), :],
                                     Ariake_hyper_aph[find(565, Rrs_wave), :],
-                                    Ariake_hyper_aph[find(674, Rrs_wave), :],
+                                    Ariake_hyper_aph[find(672, Rrs_wave), :],
                                     ])
 
 ad_measu_SGLI_Ariake = np.asarray([Ariake_hyper_ad[find(380, Rrs_wave), :],
@@ -269,7 +269,7 @@ ad_measu_SGLI_Ariake = np.asarray([Ariake_hyper_ad[find(380, Rrs_wave), :],
                                    Ariake_hyper_ad[find(490, Rrs_wave), :],
                                    Ariake_hyper_ad[find(530, Rrs_wave), :],
                                    Ariake_hyper_ad[find(565, Rrs_wave), :],
-                                   Ariake_hyper_ad[find(674, Rrs_wave), :],
+                                   Ariake_hyper_ad[find(672, Rrs_wave), :],
                                    ])
 
 ay_measu_SGLI_Ariake = np.asarray([Ariake_hyper_ay[find(380, Rrs_wave), :],
@@ -278,7 +278,7 @@ ay_measu_SGLI_Ariake = np.asarray([Ariake_hyper_ay[find(380, Rrs_wave), :],
                                    Ariake_hyper_ay[find(490, Rrs_wave), :],
                                    Ariake_hyper_ay[find(530, Rrs_wave), :],
                                    Ariake_hyper_ay[find(565, Rrs_wave), :],
-                                   Ariake_hyper_ay[find(674, Rrs_wave), :],
+                                   Ariake_hyper_ay[find(672, Rrs_wave), :],
                                    ])
 
 ap_measu_SGLI_Ariake = np.asarray([Ariake_hyper_ap[find(380, Rrs_wave), :],
@@ -287,7 +287,7 @@ ap_measu_SGLI_Ariake = np.asarray([Ariake_hyper_ap[find(380, Rrs_wave), :],
                                    Ariake_hyper_ap[find(490, Rrs_wave), :],
                                    Ariake_hyper_ap[find(530, Rrs_wave), :],
                                    Ariake_hyper_ap[find(565, Rrs_wave), :],
-                                   Ariake_hyper_ap[find(674, Rrs_wave), :],
+                                   Ariake_hyper_ap[find(672, Rrs_wave), :],
                                    ])
 
 # In[11]:
@@ -299,7 +299,7 @@ SGLI_Rrs_Ise = {'380': Rrs_Ise[380.0],
                 '490': Rrs_Ise[490.0],
                 '530': Rrs_Ise[530.0],
                 '565': (Rrs_Ise[564.0] + Rrs_Ise[566.0]) / 2,
-                '674': Rrs_Ise[674.0],
+                '672': Rrs_Ise[672.0],
                 }
 SGLI_Rrs_Ise = pd.DataFrame(SGLI_Rrs_Ise)
 SGLI_Rrs_Ise = SGLI_Rrs_Ise.to_numpy()
@@ -309,7 +309,7 @@ aph_measu_SGLI_Ise = np.asarray([Ise_hyper_aph[find(380, Rrs_wave), :],
                                  Ise_hyper_aph[find(490, Rrs_wave), :],
                                  Ise_hyper_aph[find(530, Rrs_wave), :],
                                  Ise_hyper_aph[find(565, Rrs_wave), :],
-                                 Ise_hyper_aph[find(674, Rrs_wave), :],
+                                 Ise_hyper_aph[find(672, Rrs_wave), :],
                                  ])
 
 ad_measu_SGLI_Ise = np.asarray([Ise_hyper_ad[find(380, Rrs_wave), :],
@@ -318,7 +318,7 @@ ad_measu_SGLI_Ise = np.asarray([Ise_hyper_ad[find(380, Rrs_wave), :],
                                 Ise_hyper_ad[find(490, Rrs_wave), :],
                                 Ise_hyper_ad[find(530, Rrs_wave), :],
                                 Ise_hyper_ad[find(565, Rrs_wave), :],
-                                Ise_hyper_ad[find(674, Rrs_wave), :],
+                                Ise_hyper_ad[find(672, Rrs_wave), :],
                                 ])
 
 ay_measu_SGLI_Ise = np.asarray([Ise_hyper_ay[find(380, Rrs_wave), :],
@@ -327,7 +327,7 @@ ay_measu_SGLI_Ise = np.asarray([Ise_hyper_ay[find(380, Rrs_wave), :],
                                 Ise_hyper_ay[find(490, Rrs_wave), :],
                                 Ise_hyper_ay[find(530, Rrs_wave), :],
                                 Ise_hyper_ay[find(565, Rrs_wave), :],
-                                Ise_hyper_ay[find(674, Rrs_wave), :],
+                                Ise_hyper_ay[find(672, Rrs_wave), :],
                                 ])
 
 ap_measu_SGLI_Ise = np.asarray([Ise_hyper_ap[find(380, Rrs_wave), :],
@@ -336,7 +336,7 @@ ap_measu_SGLI_Ise = np.asarray([Ise_hyper_ap[find(380, Rrs_wave), :],
                                 Ise_hyper_ap[find(490, Rrs_wave), :],
                                 Ise_hyper_ap[find(530, Rrs_wave), :],
                                 Ise_hyper_ap[find(565, Rrs_wave), :],
-                                Ise_hyper_ap[find(674, Rrs_wave), :],
+                                Ise_hyper_ap[find(672, Rrs_wave), :],
                                 ])
 
 # In[12]:
@@ -348,7 +348,7 @@ SGLI_Rrs_Ariake_full = {'380': Rrs_Ariake[380.0],
                         '490': Rrs_Ariake[490.0],
                         '530': Rrs_Ariake[530.0],
                         '565': (Rrs_Ariake[564.0] + Rrs_Ariake[566.0]) / 2,
-                        '674': Rrs_Ariake[674.0],
+                        '672': Rrs_Ariake[672.0],
                         '763': (Rrs_Ariake[762.0] + Rrs_Ariake[764.0]) / 2,
                         '869': (Rrs_Ariake[868.0] + Rrs_Ariake[870.0]) / 2
                         }
@@ -361,7 +361,7 @@ SGLI_Rrs_Ise_full = {'380': Rrs_Ise[380.0],
                      '490': Rrs_Ise[490.0],
                      '530': Rrs_Ise[530.0],
                      '565': (Rrs_Ise[564.0] + Rrs_Ise[566.0]) / 2,
-                     '674': Rrs_Ise[674.0],
+                     '672': Rrs_Ise[672.0],
                      '763': (Rrs_Ise[762.0] + Rrs_Ise[764.0]) / 2,
                      '869': (Rrs_Ise[868.0] + Rrs_Ise[870.0]) / 2
                      }
@@ -376,7 +376,7 @@ ap_measu_SGLI_ECS = ap_ECS.to_numpy()
 ad_measu_SGLI_ECS = ad_ECS.to_numpy()
 ay_measu_SGLI_ECS = ay_ECS.to_numpy()
 aph_measu_SGLI_ECS = aph_ECS.to_numpy()
-SGLI_wave_full = [380, 412, 443, 490, 530, 565, 674]
+SGLI_wave_full = [380, 412, 443, 490, 530, 565, 672]
 
 # # QA score
 
@@ -393,7 +393,7 @@ SGLI_5Rrs_Ariake = {
     '490': Rrs_Ariake[490.0],
 
     '565': (Rrs_Ariake[564.0] + Rrs_Ariake[566.0]) / 2,
-    '674': Rrs_Ariake[674.0]}
+    '672': Rrs_Ariake[672.0]}
 SGLI_5Rrs_Ariake = pd.DataFrame(SGLI_5Rrs_Ariake).astype(float)
 SGLI_5Rrs_Ariake = SGLI_5Rrs_Ariake.to_numpy()
 
@@ -432,7 +432,7 @@ SGLI_5Rrs_Ise = {
     '490': Rrs_Ise[490.0],
 
     '565': (Rrs_Ise[564.0] + Rrs_Ise[566.0]) / 2,
-    '674': Rrs_Ise[674.0]}
+    '672': Rrs_Ise[672.0]}
 SGLI_5Rrs_Ise = pd.DataFrame(SGLI_5Rrs_Ise).astype(float)
 SGLI_5Rrs_Ise = SGLI_5Rrs_Ise.to_numpy()
 
@@ -476,7 +476,7 @@ SGLI_5Rrs_ECS = {
     '490': Rrs_ECS['Rrs_SGLI_443'],
 
     '565': Rrs_ECS['Rrs_SGLI_565'],
-    '674': Rrs_ECS['Rrs_SGLI_673.5']}
+    '672': Rrs_ECS['Rrs_SGLI_673.5']}
 SGLI_5Rrs_ECS = pd.DataFrame(SGLI_5Rrs_ECS).astype(float)
 SGLI_5Rrs_ECS = SGLI_5Rrs_ECS.to_numpy()
 
@@ -804,7 +804,7 @@ save_file(path, varname(SGLI_Rrs_Ariake_full), SGLI_Rrs_Ariake_full)
 # In[ ]:
 
 
-SGLI_wave_full = [380, 412, 443, 490, 530, 565, 674]
+SGLI_wave_full = [380, 412, 443, 490, 530, 565, 672]
 save_file(path, varname(SGLI_wave_full), SGLI_wave_full)
 save_file(path, varname(Rrs_wave), Rrs_wave)
 save_file(path, varname(SGLI_wave_vis), SGLI_wave_vis)
