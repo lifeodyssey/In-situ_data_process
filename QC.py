@@ -465,7 +465,7 @@ plt.figure(figsize=(8, 10))
 # In[20]:
 
 
-Rrs_ECS.columns
+# Rrs_ECS.columns
 
 # In[21]:
 
@@ -550,44 +550,44 @@ lons_A, lats_A = m(Lon_Ariake, Lat_Ariake)
 lons_I, lats_I = m(Lon_Ise, Lat_Ise)
 lons_E, lats_E = m(Lon_ECS.to_list(), Lat_ECS.to_list())
 ###The four positions are [left, right, top, bottom]
-m.drawmeridians(meridians, fontsize=10, labels=[0, 0, 0, 1])
-m.drawparallels(parallels, fontsize=10, labels=[1, 0, 0, 0])
+m.drawmeridians(meridians, fontsize=28, labels=[0, 0, 0, 1])
+m.drawparallels(parallels, fontsize=28, labels=[1, 0, 0, 0])
 m.scatter(lons_A, lats_A, marker='o', color='r', zorder=5, s=3)
 m.scatter(lons_I, lats_I, marker='o', color='g', zorder=5, s=8)
 m.scatter(lons_E, lats_E, marker='o', color='b', zorder=5, s=8)
 plt.show()
 
 # ## Mean,min,max,median,ratio
-
-# In[24]:
-
-
-len(Chla_ECS)
-
-# In[25]:
-
-
-np.min(Chla_ECS)
-
-# In[26]:
-
-
-np.max(Chla_ECS)
-
-# In[27]:
-
-
-np.min(aph_measu_SGLI_ECS[2, :])
-
-# In[28]:
-
-
-np.max(aph_measu_SGLI_ECS[2, :])
-
-# In[29]:
-
-
-Date_ECS
+#
+# # In[24]:
+#
+#
+# len(Chla_ECS)
+#
+# # In[25]:
+#
+#
+# np.min(Chla_ECS)
+#
+# # In[26]:
+#
+#
+# np.max(Chla_ECS)
+#
+# # In[27]:
+#
+#
+# np.min(aph_measu_SGLI_ECS[2, :])
+#
+# # In[28]:
+#
+#
+# np.max(aph_measu_SGLI_ECS[2, :])
+#
+# # In[29]:
+#
+#
+# Date_ECS
 
 # ## Spectra Plot
 
@@ -626,6 +626,7 @@ plt.yticks(fontsize=16)
 plt.title('$a_{y}$', fontsize=16)
 
 plt.suptitle('Ariake Sea', fontsize=16)
+plt.show()
 
 # In[ ]:
 
@@ -662,7 +663,7 @@ plt.yticks(fontsize=16)
 plt.title('$a_{y}$', fontsize=16)
 
 plt.suptitle('Ise-Mikawa Bay', fontsize=16)
-
+plt.show()
 # In[ ]:
 
 
@@ -698,7 +699,7 @@ plt.yticks(fontsize=16)
 plt.title('$a_{y}$', fontsize=16)
 
 plt.suptitle('East China Sea', fontsize=16)
-
+plt.show()
 # In[ ]:
 
 
@@ -749,7 +750,7 @@ def save_file(path, filename, variable):
 # In[ ]:
 
 
-path = '/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/Mider_data/April5/'
+path = '/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/April20/'
 save_file(path, varname(Ariake_hyper_ad), Ariake_hyper_ad)
 save_file(path, varname(Ariake_hyper_ap), Ariake_hyper_ad)
 save_file(path, varname(Ariake_hyper_aph), Ariake_hyper_aph)
