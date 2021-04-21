@@ -165,12 +165,12 @@ Lon_ECS = ECS.loc[:, 'Long(E)']
 # In[5]:
 
 
-Chla_ECS.to_numpy()
+# Chla_ECS.to_numpy()
 
 # In[6]:
 
 
-np.where(Chla_ECS.to_numpy() == np.nan)
+# np.where(Chla_ECS.to_numpy() == np.nan)
 
 # ## Sort into numpy
 
@@ -377,7 +377,7 @@ ad_measu_SGLI_ECS = ad_ECS.to_numpy()
 ay_measu_SGLI_ECS = ay_ECS.to_numpy()
 aph_measu_SGLI_ECS = aph_ECS.to_numpy()
 SGLI_wave_full = [380, 412, 443, 490, 530, 565, 672]
-
+# print(np.shape(SGLI_Rrs_ECS))
 # # QA score
 
 # ## Ariake
