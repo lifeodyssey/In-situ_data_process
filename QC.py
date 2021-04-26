@@ -13,7 +13,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 '''read in-situ data'''
-Ariake = pd.read_excel('/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/full_nozero.xlsx',
+Ariake = pd.read_excel('/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/full_nozero2.xlsx',
                        sheet_name='Ariake', header=0)
 
 Rrs_Ariake = Ariake.loc[:, 'In situ Rrs_Trios':'In situ Rrs_multi-spectral bands']
@@ -56,29 +56,29 @@ StID = Ariake.loc[:, 'Unnamed: 1']
 
 StID.columns = StID.iloc[0]
 StID = StID.drop(labels=0)
-StID_Ariake = StID.to_list()
+StID_Ariake = StID.to_numpy()
 
 Date = Ariake.loc[:, 'Unnamed: 4']
 Date.columns = Date.iloc[0]
 Date = Date.drop(labels=0)
-Date_Ariake = Date.to_list()
+Date_Ariake = Date.to_numpy()
 
 Lat = Ariake.loc[:, 'Unnamed: 2']
 Lat.columns = Lat.iloc[0]
 Lat = Lat.drop(labels=0)
-Lat_Ariake = Lat.to_list()
+Lat_Ariake = Lat.to_numpy()
 
 Lon = Ariake.loc[:, 'Unnamed: 3']
 Lon.columns = Lon.iloc[0]
 Lon = Lon.drop(labels=0)
-Lon_Ariake = Lon.to_list()
+Lon_Ariake = Lon.to_numpy()
 
 # ## Read Ise
 
 # In[2]:
 
 
-Ise = pd.read_excel('/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/full_nozero.xlsx',
+Ise = pd.read_excel('/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/full_nozero2.xlsx',
                     sheet_name='Ise', header=0)
 # get_ipython().run_line_magic('matplotlib', 'inline')
 
@@ -122,39 +122,44 @@ StID = Ise.loc[:, 'Unnamed: 1']
 
 StID.columns = StID.iloc[0]
 StID = StID.drop(labels=0)
-StID_Ise = StID.to_list()
+StID_Ise = StID.to_numpy()
 
 Date = Ise.loc[:, 'Unnamed: 4']
 Date.columns = Date.iloc[0]
 Date = Date.drop(labels=0)
-Date_Ise = Date.to_list()
+Date_Ise = Date.to_numpy()
 
 Lat = Ise.loc[:, 'Unnamed: 2']
 Lat.columns = Lat.iloc[0]
 Lat = Lat.drop(labels=0)
-Lat_Ise = Lat.to_list()
+Lat_Ise = Lat.to_numpy()
 
 Lon = Ise.loc[:, 'Unnamed: 3']
 Lon.columns = Lon.iloc[0]
 Lon = Lon.drop(labels=0)
-Lon_Ise = Lon.to_list()
+Lon_Ise = Lon.to_numpy()
 
 # ## Read ECS
 
 # In[3]:
 
 
-ECS = pd.read_excel('/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/full_nozero.xlsx',
+ECS = pd.read_excel('/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/full_nozero2.xlsx',
                     sheet_name='ECS', header=0)
 
 # In[4]:
 
+Rrs_ECS_full_pd = ECS.loc[:, 'Rrs_380':'Rrs_683']
+ap_ECS_full = ECS.loc[:, 'ap_380':'ap_683']
+ad_ECS_full = ECS.loc[:, 'ad_380':'ad_683']
+aph_ECS_full = ECS.loc[:, 'aph_380':'aph_683']
+ay_ECS_full = ECS.loc[:, 'ay_380':'ay_683']
 
-Rrs_ECS = ECS.loc[:, 'Rrs_SGLI_380':'Rrs_SGLI_673.5']
-ap_ECS = ECS.loc[:, 'ap_SGLI_380':'ap_SGLI_673.5']
-ad_ECS = ECS.loc[:, 'ad_SGLI_380':'ad_SGLI_673.5']
-aph_ECS = ECS.loc[:, 'aph_SGLI_380':'aph_SGLI_673.5']
-ay_ECS = ECS.loc[:, 'ay_SGLI_380':'ay_SGLI_673.5']
+Rrs_ms_ECS = ECS.loc[:, 'Rrs_SGLI_380':'Rrs_SGLI_673.5']
+# ap_ECS = ECS.loc[:, 'ap_SGLI_380':'ap_SGLI_673.5']
+# ad_ECS = ECS.loc[:, 'ad_SGLI_380':'ad_SGLI_673.5']
+# aph_ECS = ECS.loc[:, 'aph_SGLI_380':'aph_SGLI_673.5']
+# ay_ECS = ECS.loc[:, 'ay_SGLI_380':'ay_SGLI_673.5']
 Chla_ECS = ECS.loc[:, 'Chla_Fluor.(mg/m^3)']
 TSM_ECS = ECS.loc[:, 'TSM (g m-3)']
 StID_ECS = ECS.loc[:, 'StID']
@@ -371,12 +376,59 @@ SGLI_Rrs_Ise_full = SGLI_Rrs_Ise_full.to_numpy()
 # In[13]:
 
 
-SGLI_Rrs_ECS = Rrs_ECS.to_numpy()
-ap_measu_SGLI_ECS = ap_ECS.to_numpy()
-ad_measu_SGLI_ECS = ad_ECS.to_numpy()
-ay_measu_SGLI_ECS = ay_ECS.to_numpy()
-aph_measu_SGLI_ECS = aph_ECS.to_numpy()
-SGLI_wave_full = [380, 412, 443, 490, 530, 565, 672]
+Rrs_ECS_full = Rrs_ECS_full_pd.to_numpy()
+ap_measu_ECS_full = ap_ECS_full.to_numpy()
+ad_measu_ECS_full = ad_ECS_full.to_numpy()
+ay_measu_ECS_full = ay_ECS_full.to_numpy()
+aph_measu_ECS_full = aph_ECS_full.to_numpy()
+SGLI_wave_full = np.array([380, 412, 443, 490, 530, 565, 672])
+ECS_wave = np.array([380, 412, 443, 465, 490, 510, 532, 555, 565, 589, 625, 665, 683])
+
+Rrs_measu_SGLI_ECS = np.asarray([Rrs_ECS_full[:, find(380, ECS_wave)],
+                                 Rrs_ECS_full[:, find(412, ECS_wave)],
+                                 Rrs_ECS_full[:, find(443, ECS_wave)],
+                                 Rrs_ECS_full[:, find(490, ECS_wave)],
+                                 Rrs_ECS_full[:, find(530, ECS_wave)],
+                                 Rrs_ECS_full[:, find(565, ECS_wave)],
+                                 Rrs_ECS_full[:, find(672, ECS_wave)],
+                                 ])
+
+aph_measu_SGLI_ECS = np.asarray([aph_measu_ECS_full[:, find(380, ECS_wave)],
+                                 aph_measu_ECS_full[:, find(412, ECS_wave)],
+                                 aph_measu_ECS_full[:, find(443, ECS_wave)],
+                                 aph_measu_ECS_full[:, find(490, ECS_wave)],
+                                 aph_measu_ECS_full[:, find(530, ECS_wave)],
+                                 aph_measu_ECS_full[:, find(565, ECS_wave)],
+                                 aph_measu_ECS_full[:, find(672, ECS_wave)],
+                                 ])
+
+ad_measu_SGLI_ECS = np.asarray([ad_measu_ECS_full[:, find(380, ECS_wave)],
+                                ad_measu_ECS_full[:, find(412, ECS_wave)],
+                                ad_measu_ECS_full[:, find(443, ECS_wave)],
+                                ad_measu_ECS_full[:, find(490, ECS_wave)],
+                                ad_measu_ECS_full[:, find(530, ECS_wave)],
+                                ad_measu_ECS_full[:, find(565, ECS_wave)],
+                                ad_measu_ECS_full[:, find(672, ECS_wave)],
+                                ])
+
+ay_measu_SGLI_ECS = np.asarray([ay_measu_ECS_full[:, find(380, ECS_wave)],
+                                ay_measu_ECS_full[:, find(412, ECS_wave)],
+                                ay_measu_ECS_full[:, find(443, ECS_wave)],
+                                ay_measu_ECS_full[:, find(490, ECS_wave)],
+                                ay_measu_ECS_full[:, find(530, ECS_wave)],
+                                ay_measu_ECS_full[:, find(565, ECS_wave)],
+                                ay_measu_ECS_full[:, find(672, ECS_wave)],
+                                ])
+
+ap_measu_SGLI_ECS = np.asarray([ap_measu_ECS_full[:, find(380, ECS_wave)],
+                                ap_measu_ECS_full[:, find(412, ECS_wave)],
+                                ap_measu_ECS_full[:, find(443, ECS_wave)],
+                                ap_measu_ECS_full[:, find(490, ECS_wave)],
+                                ap_measu_ECS_full[:, find(530, ECS_wave)],
+                                ap_measu_ECS_full[:, find(565, ECS_wave)],
+                                ap_measu_ECS_full[:, find(672, ECS_wave)],
+                                ])
+
 # print(np.shape(SGLI_Rrs_ECS))
 # # QA score
 
@@ -471,12 +523,11 @@ plt.figure(figsize=(8, 10))
 
 
 SGLI_5Rrs_ECS = {
-    '412': Rrs_ECS['Rrs_SGLI_380'],
-    '443': Rrs_ECS['Rrs_SGLI_412'],
-    '490': Rrs_ECS['Rrs_SGLI_443'],
-
-    '565': Rrs_ECS['Rrs_SGLI_565'],
-    '672': Rrs_ECS['Rrs_SGLI_673.5']}
+    '412': Rrs_ECS_full_pd['Rrs_412'],
+    '443': Rrs_ECS_full_pd['Rrs_412'],
+    '490': Rrs_ECS_full_pd['Rrs_490'],
+    '565': Rrs_ECS_full_pd['Rrs_565'],
+    '672': (Rrs_ECS_full_pd['Rrs_665'] + Rrs_ECS_full_pd['Rrs_683']) / 2}
 SGLI_5Rrs_ECS = pd.DataFrame(SGLI_5Rrs_ECS).astype(float)
 SGLI_5Rrs_ECS = SGLI_5Rrs_ECS.to_numpy()
 
@@ -506,6 +557,9 @@ plt.figure(figsize=(8, 10))
 
 # In[23]:
 
+id_Ariake = np.where(totScore_Ariake > 0.5)[0]
+id_Ise = np.where(totScore_Ise > 0.5)[0]
+id_ECS = np.where(totScore_ECS > 0.5)[0]
 
 import matplotlib.pyplot as plt
 from mpl_toolkits.basemap import Basemap
@@ -546,9 +600,9 @@ m.drawrivers()
 parallels = np.arange(lat_min, lat_max, 2)
 meridians = np.arange(lon_min, lon_max, 2)
 
-lons_A, lats_A = m(Lon_Ariake, Lat_Ariake)
-lons_I, lats_I = m(Lon_Ise, Lat_Ise)
-lons_E, lats_E = m(Lon_ECS.to_list(), Lat_ECS.to_list())
+lons_A, lats_A = m(Lon_Ariake[id_Ariake], Lat_Ariake[id_Ariake])
+lons_I, lats_I = m(Lon_Ise[id_Ise], Lat_Ise[id_Ise])
+lons_E, lats_E = m(Lon_ECS.to_numpy()[id_ECS], Lat_ECS.to_numpy()[id_ECS])
 ###The four positions are [left, right, top, bottom]
 m.drawmeridians(meridians, fontsize=28, labels=[0, 0, 0, 1])
 m.drawparallels(parallels, fontsize=28, labels=[1, 0, 0, 0])
@@ -596,21 +650,21 @@ plt.show()
 
 plt.figure(1, figsize=(16, 9))
 plt.subplot(221)
-plt.plot(SGLI_wave_vis, SGLI_Rrs_Ariake.T)
+plt.plot(SGLI_wave_vis, SGLI_Rrs_Ariake[id_Ariake, :].T)
 plt.ylabel('$Rrs(sr^{-1})$', fontdict={'fontsize': '16'})
 plt.xticks(SGLI_wave_vis, fontsize=16)
 plt.yticks(fontsize=16)
 plt.title('Rrs', fontsize=16)
 
 plt.subplot(222)
-plt.plot(SGLI_wave_vis, aph_measu_SGLI_Ariake)
+plt.plot(SGLI_wave_vis, aph_measu_SGLI_Ariake[:, id_Ariake])
 plt.ylabel('$a(m^{-1})$', fontdict={'fontsize': '16'})
 plt.xticks(SGLI_wave_vis, fontsize=16)
 plt.yticks(fontsize=16)
 plt.title('$a_{ph}$', fontsize=16)
 
 plt.subplot(223)
-plt.plot(SGLI_wave_vis, ad_measu_SGLI_Ariake)
+plt.plot(SGLI_wave_vis, ad_measu_SGLI_Ariake[:, id_Ariake])
 plt.xlabel('Wavelength(nm)', fontdict={'fontsize': '16'})
 plt.ylabel('$a(m^{-1})$', fontdict={'fontsize': '16'})
 plt.xticks(SGLI_wave_vis, fontsize=16)
@@ -618,7 +672,7 @@ plt.yticks(fontsize=16)
 plt.title('$a_{d}$', fontsize=16)
 
 plt.subplot(224)
-plt.plot(SGLI_wave_vis, ay_measu_SGLI_Ariake)
+plt.plot(SGLI_wave_vis, ay_measu_SGLI_Ariake[:, id_Ariake])
 plt.xlabel('Wavelength(nm)', fontdict={'fontsize': '16'})
 plt.ylabel('$a(m^{-1})$', fontdict={'fontsize': '16'})
 plt.xticks(SGLI_wave_vis, fontsize=16)
@@ -633,21 +687,21 @@ plt.show()
 
 plt.figure(2, figsize=(16, 9))
 plt.subplot(221)
-plt.plot(SGLI_wave_vis, SGLI_Rrs_Ise.T)
+plt.plot(SGLI_wave_vis, SGLI_Rrs_Ise[id_Ise, :].T)
 plt.ylabel('$Rrs(sr^{-1})$', fontdict={'fontsize': '16'})
 plt.xticks(SGLI_wave_vis, fontsize=16)
 plt.yticks(fontsize=16)
 plt.title('Rrs', fontsize=16)
 
 plt.subplot(222)
-plt.plot(SGLI_wave_vis, aph_measu_SGLI_Ise)
+plt.plot(SGLI_wave_vis, aph_measu_SGLI_Ise[:, id_Ise])
 plt.ylabel('$a(m^{-1})$', fontdict={'fontsize': '16'})
 plt.xticks(SGLI_wave_vis, fontsize=16)
 plt.yticks(fontsize=16)
 plt.title('$a_{ph}$', fontsize=16)
 
 plt.subplot(223)
-plt.plot(SGLI_wave_vis, ad_measu_SGLI_Ise)
+plt.plot(SGLI_wave_vis, ad_measu_SGLI_Ise[:, id_Ise])
 plt.xlabel('Wavelength(nm)', fontdict={'fontsize': '16'})
 plt.ylabel('$a(m^{-1})$', fontdict={'fontsize': '16'})
 plt.xticks(SGLI_wave_vis, fontsize=16)
@@ -655,7 +709,7 @@ plt.yticks(fontsize=16)
 plt.title('$a_{d}$', fontsize=16)
 
 plt.subplot(224)
-plt.plot(SGLI_wave_vis, ay_measu_SGLI_Ise)
+plt.plot(SGLI_wave_vis, ay_measu_SGLI_Ise[:, id_Ise])
 plt.xlabel('Wavelength(nm)', fontdict={'fontsize': '16'})
 plt.ylabel('$a(m^{-1})$', fontdict={'fontsize': '16'})
 plt.xticks(SGLI_wave_vis, fontsize=16)
@@ -669,21 +723,21 @@ plt.show()
 
 plt.figure(3, figsize=(16, 9))
 plt.subplot(221)
-plt.plot(SGLI_wave_vis, SGLI_Rrs_ECS.T)
+plt.plot(SGLI_wave_vis, Rrs_measu_SGLI_ECS[:, id_ECS])
 plt.ylabel('$Rrs(sr^{-1})$', fontdict={'fontsize': '16'})
 plt.xticks(SGLI_wave_vis, fontsize=16)
 plt.yticks(fontsize=16)
 plt.title('Rrs', fontsize=16)
 
 plt.subplot(222)
-plt.plot(SGLI_wave_vis, aph_measu_SGLI_ECS.T)
+plt.plot(SGLI_wave_vis, aph_measu_SGLI_ECS[:, id_ECS])
 plt.ylabel('$a(m^{-1})$', fontdict={'fontsize': '16'})
 plt.xticks(SGLI_wave_vis, fontsize=16)
 plt.yticks(fontsize=16)
 plt.title('$a_{ph}$', fontsize=16)
 
 plt.subplot(223)
-plt.plot(SGLI_wave_vis, ad_measu_SGLI_ECS.T)
+plt.plot(SGLI_wave_vis, ad_measu_SGLI_ECS[:, id_ECS])
 plt.xlabel('Wavelength(nm)', fontdict={'fontsize': '16'})
 plt.ylabel('$a(m^{-1})$', fontdict={'fontsize': '16'})
 plt.xticks(SGLI_wave_vis, fontsize=16)
@@ -691,7 +745,7 @@ plt.yticks(fontsize=16)
 plt.title('$a_{d}$', fontsize=16)
 
 plt.subplot(224)
-plt.plot(SGLI_wave_vis, ay_measu_SGLI_ECS.T)
+plt.plot(SGLI_wave_vis, ay_measu_SGLI_ECS[:, id_ECS])
 plt.xlabel('Wavelength(nm)', fontdict={'fontsize': '16'})
 plt.ylabel('$a(m^{-1})$', fontdict={'fontsize': '16'})
 plt.xticks(SGLI_wave_vis, fontsize=16)
@@ -750,51 +804,51 @@ def save_file(path, filename, variable):
 # In[ ]:
 
 
-path = '/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/April20/'
-save_file(path, varname(Ariake_hyper_ad), Ariake_hyper_ad)
-save_file(path, varname(Ariake_hyper_ap), Ariake_hyper_ad)
-save_file(path, varname(Ariake_hyper_aph), Ariake_hyper_aph)
-save_file(path, varname(Ariake_hyper_ay), Ariake_hyper_ay)
-save_file(path, varname(Ariake_hyper_Rrs), Ariake_hyper_Rrs)
+path = '/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/April26/'
+save_file(path, varname(Ariake_hyper_ad), Ariake_hyper_ad[id_Ariake, :])
+save_file(path, varname(Ariake_hyper_ap), Ariake_hyper_ad[id_Ariake, :])
+save_file(path, varname(Ariake_hyper_aph), Ariake_hyper_aph[id_Ariake, :])
+save_file(path, varname(Ariake_hyper_ay), Ariake_hyper_ay[id_Ariake, :])
+save_file(path, varname(Ariake_hyper_Rrs), Ariake_hyper_Rrs[id_Ariake, :])
 save_file(path, varname(Rrs_wave), Rrs_wave)
 
-save_file(path, varname(SGLI_Rrs_Ariake), SGLI_Rrs_Ariake)
-save_file(path, varname(ap_measu_SGLI_Ariake), ap_measu_SGLI_Ariake)
-save_file(path, varname(aph_measu_SGLI_Ariake), aph_measu_SGLI_Ariake)
-save_file(path, varname(ad_measu_SGLI_Ariake), ad_measu_SGLI_Ariake)
-save_file(path, varname(ay_measu_SGLI_Ariake), ay_measu_SGLI_Ariake)
+save_file(path, varname(SGLI_Rrs_Ariake), SGLI_Rrs_Ariake[id_Ariake, :])
+save_file(path, varname(ap_measu_SGLI_Ariake), ap_measu_SGLI_Ariake[:, id_Ariake])
+save_file(path, varname(aph_measu_SGLI_Ariake), aph_measu_SGLI_Ariake[:, id_Ariake])
+save_file(path, varname(ad_measu_SGLI_Ariake), ad_measu_SGLI_Ariake[:, id_Ariake])
+save_file(path, varname(ay_measu_SGLI_Ariake), ay_measu_SGLI_Ariake[:, id_Ariake])
 save_file(path, varname(SGLI_wave_vis), SGLI_wave_vis)
 
-save_file(path, varname(Lon_Ariake), Lon_Ariake)
-save_file(path, varname(Lat_Ariake), Lat_Ariake)
+save_file(path, varname(Lon_Ariake), Lon_Ariake[id_Ariake])
+save_file(path, varname(Lat_Ariake), Lat_Ariake[id_Ariake])
 
-save_file(path, varname(Date_Ariake), Date_Ariake)
-save_file(path, varname(StID_Ariake), StID_Ariake)
-save_file(path, varname(Chla_Ariake), Chla_Ariake)
-save_file(path, varname(TSM_Ariake), TSM_Ariake)
+save_file(path, varname(Date_Ariake), Date_Ariake[id_Ariake])
+save_file(path, varname(StID_Ariake), StID_Ariake[id_Ariake])
+save_file(path, varname(Chla_Ariake), Chla_Ariake[id_Ariake])
+save_file(path, varname(TSM_Ariake), TSM_Ariake[id_Ariake])
 
 # In[ ]:
 
 
-save_file(path, varname(Ise_hyper_ad), Ise_hyper_ad)
-save_file(path, varname(Ise_hyper_ap), Ise_hyper_ad)
-save_file(path, varname(Ise_hyper_aph), Ise_hyper_aph)
-save_file(path, varname(Ise_hyper_ay), Ise_hyper_ay)
-save_file(path, varname(Ise_hyper_Rrs), Ise_hyper_Rrs)
+save_file(path, varname(Ise_hyper_ad), Ise_hyper_ad[:, id_Ise])
+save_file(path, varname(Ise_hyper_ap), Ise_hyper_ad[:, id_Ise])
+save_file(path, varname(Ise_hyper_aph), Ise_hyper_aph[:, id_Ise])
+save_file(path, varname(Ise_hyper_ay), Ise_hyper_ay[:, id_Ise])
+save_file(path, varname(Ise_hyper_Rrs), Ise_hyper_Rrs[:, id_Ise])
 
-save_file(path, varname(SGLI_Rrs_Ise), SGLI_Rrs_Ise)
-save_file(path, varname(ap_measu_SGLI_Ise), ap_measu_SGLI_Ise)
-save_file(path, varname(aph_measu_SGLI_Ise), aph_measu_SGLI_Ise)
-save_file(path, varname(ad_measu_SGLI_Ise), ad_measu_SGLI_Ise)
-save_file(path, varname(ay_measu_SGLI_Ise), ay_measu_SGLI_Ise)
+save_file(path, varname(SGLI_Rrs_Ise), SGLI_Rrs_Ise[id_Ise, :])
+save_file(path, varname(ap_measu_SGLI_Ise), ap_measu_SGLI_Ise[:, id_Ise])
+save_file(path, varname(aph_measu_SGLI_Ise), aph_measu_SGLI_Ise[:, id_Ise])
+save_file(path, varname(ad_measu_SGLI_Ise), ad_measu_SGLI_Ise[:, id_Ise])
+save_file(path, varname(ay_measu_SGLI_Ise), ay_measu_SGLI_Ise[:, id_Ise])
 
-save_file(path, varname(Lon_Ise), Lon_Ise)
-save_file(path, varname(Lat_Ise), Lat_Ise)
+save_file(path, varname(Lon_Ise), Lon_Ise[id_Ise])
+save_file(path, varname(Lat_Ise), Lat_Ise[id_Ise])
 
-save_file(path, varname(Date_Ise), Date_Ise)
-save_file(path, varname(StID_Ise), StID_Ise)
-save_file(path, varname(Chla_Ise), Chla_Ise)
-save_file(path, varname(TSM_Ise), TSM_Ise)
+save_file(path, varname(Date_Ise), Date_Ise[id_Ise])
+save_file(path, varname(StID_Ise), StID_Ise[id_Ise])
+save_file(path, varname(Chla_Ise), Chla_Ise[id_Ise])
+save_file(path, varname(TSM_Ise), TSM_Ise[id_Ise])
 
 # In[ ]:
 
@@ -809,6 +863,7 @@ SGLI_wave_full = [380, 412, 443, 490, 530, 565, 672]
 save_file(path, varname(SGLI_wave_full), SGLI_wave_full)
 save_file(path, varname(Rrs_wave), Rrs_wave)
 save_file(path, varname(SGLI_wave_vis), SGLI_wave_vis)
+save_file(path, varname(ECS_wave), ECS_wave)
 
 # In[ ]:
 
@@ -820,18 +875,24 @@ save_file(path, varname(SGLI_wave_vis), SGLI_wave_vis)
 # save_file(path,varname(ECS_hyper_Rrs),ECS_hyper_Rrs)
 
 
-save_file(path, varname(SGLI_Rrs_ECS), SGLI_Rrs_ECS)
-save_file(path, varname(ap_measu_SGLI_ECS), ap_measu_SGLI_ECS)
-save_file(path, varname(aph_measu_SGLI_ECS), aph_measu_SGLI_ECS)
-save_file(path, varname(ad_measu_SGLI_ECS), ad_measu_SGLI_ECS)
-save_file(path, varname(ay_measu_SGLI_ECS), ay_measu_SGLI_ECS)
+save_file(path, varname(Rrs_ECS_full), Rrs_ECS_full[id_ECS, :])
+save_file(path, varname(ap_measu_ECS_full), ap_measu_ECS_full[id_ECS, :])
+save_file(path, varname(aph_measu_ECS_full), aph_measu_ECS_full[id_ECS, :])
+save_file(path, varname(ad_measu_ECS_full), ad_measu_ECS_full[id_ECS, :])
+save_file(path, varname(ay_measu_ECS_full), ay_measu_ECS_full[id_ECS, :])
 
-save_file(path, varname(Lon_ECS), Lon_ECS)
-save_file(path, varname(Lat_ECS), Lat_ECS)
+save_file(path, varname(Rrs_ECS_full), Rrs_measu_SGLI_ECS[:, id_ECS])
+save_file(path, varname(ap_measu_SGLI_ECS), ap_measu_SGLI_ECS[:, id_ECS])
+save_file(path, varname(aph_measu_SGLI_ECS), aph_measu_SGLI_ECS[:, id_ECS])
+save_file(path, varname(ad_measu_SGLI_ECS), ad_measu_SGLI_ECS[:, id_ECS])
+save_file(path, varname(ay_measu_SGLI_ECS), ay_measu_SGLI_ECS[:, id_ECS])
 
-save_file(path, varname(Date_ECS), Date_ECS)
-save_file(path, varname(StID_ECS), StID_ECS)
-save_file(path, varname(Chla_ECS), Chla_ECS)
-save_file(path, varname(TSM_ECS), TSM_ECS)
+save_file(path, varname(Lon_ECS), Lon_ECS[id_ECS])
+save_file(path, varname(Lat_ECS), Lat_ECS[id_ECS])
+
+save_file(path, varname(Date_ECS), Date_ECS[id_ECS])
+save_file(path, varname(StID_ECS), StID_ECS[id_ECS])
+save_file(path, varname(Chla_ECS), Chla_ECS[id_ECS])
+save_file(path, varname(TSM_ECS), TSM_ECS[id_ECS])
 
 # In[ ]:
