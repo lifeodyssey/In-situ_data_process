@@ -218,6 +218,7 @@ Ariake_hyper_ad = np.asarray(Ariake_hyper_ad)
 Ariake_hyper_ay = np.asarray(Ariake_hyper_ay)
 Ariake_hyper_ap = np.asarray(Ariake_hyper_ap)
 
+
 # In[9]:
 
 
@@ -805,11 +806,11 @@ def save_file(path, filename, variable):
 
 
 path = '/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/April26/'
-save_file(path, varname(Ariake_hyper_ad), Ariake_hyper_ad[id_Ariake, :])
-save_file(path, varname(Ariake_hyper_ap), Ariake_hyper_ad[id_Ariake, :])
-save_file(path, varname(Ariake_hyper_aph), Ariake_hyper_aph[id_Ariake, :])
-save_file(path, varname(Ariake_hyper_ay), Ariake_hyper_ay[id_Ariake, :])
-save_file(path, varname(Ariake_hyper_Rrs), Ariake_hyper_Rrs[id_Ariake, :])
+save_file(path, varname(Ariake_hyper_ad), Ariake_hyper_ad[:, id_Ariake])
+save_file(path, varname(Ariake_hyper_ap), Ariake_hyper_ad[:, id_Ariake])
+save_file(path, varname(Ariake_hyper_aph), Ariake_hyper_aph[:, id_Ariake])
+save_file(path, varname(Ariake_hyper_ay), Ariake_hyper_ay[:, id_Ariake])
+save_file(path, varname(Ariake_hyper_Rrs), Ariake_hyper_Rrs[:, id_Ariake])
 save_file(path, varname(Rrs_wave), Rrs_wave)
 
 save_file(path, varname(SGLI_Rrs_Ariake), SGLI_Rrs_Ariake[id_Ariake, :])
@@ -881,7 +882,7 @@ save_file(path, varname(aph_measu_ECS_full), aph_measu_ECS_full[id_ECS, :])
 save_file(path, varname(ad_measu_ECS_full), ad_measu_ECS_full[id_ECS, :])
 save_file(path, varname(ay_measu_ECS_full), ay_measu_ECS_full[id_ECS, :])
 
-save_file(path, varname(Rrs_ECS_full), Rrs_measu_SGLI_ECS[:, id_ECS])
+save_file(path, varname(Rrs_measu_SGLI_ECS), Rrs_measu_SGLI_ECS[:, id_ECS])
 save_file(path, varname(ap_measu_SGLI_ECS), ap_measu_SGLI_ECS[:, id_ECS])
 save_file(path, varname(aph_measu_SGLI_ECS), aph_measu_SGLI_ECS[:, id_ECS])
 save_file(path, varname(ad_measu_SGLI_ECS), ad_measu_SGLI_ECS[:, id_ECS])
@@ -895,4 +896,4 @@ save_file(path, varname(StID_ECS), StID_ECS[id_ECS])
 save_file(path, varname(Chla_ECS), Chla_ECS[id_ECS])
 save_file(path, varname(TSM_ECS), TSM_ECS[id_ECS])
 
-# In[ ]:
+
