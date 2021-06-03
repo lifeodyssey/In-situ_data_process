@@ -13,7 +13,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 '''read in-situ data'''
-Ariake = pd.read_excel('/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/full_nozero2.xlsx',
+Ariake = pd.read_excel('/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/full_nozero.xlsx',
                        sheet_name='Ariake', header=0)
 
 Rrs_Ariake = Ariake.loc[:, 'In situ Rrs_Trios':'In situ Rrs_multi-spectral bands']
@@ -807,7 +807,7 @@ def save_file(path, filename, variable):
 
 path = '/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/April26/'
 save_file(path, varname(Ariake_hyper_ad), Ariake_hyper_ad[:, id_Ariake])
-save_file(path, varname(Ariake_hyper_ap), Ariake_hyper_ad[:, id_Ariake])
+save_file(path, varname(Ariake_hyper_ap), Ariake_hyper_ap[:, id_Ariake])
 save_file(path, varname(Ariake_hyper_aph), Ariake_hyper_aph[:, id_Ariake])
 save_file(path, varname(Ariake_hyper_ay), Ariake_hyper_ay[:, id_Ariake])
 save_file(path, varname(Ariake_hyper_Rrs), Ariake_hyper_Rrs[:, id_Ariake])
@@ -832,7 +832,7 @@ save_file(path, varname(TSM_Ariake), TSM_Ariake[id_Ariake])
 
 
 save_file(path, varname(Ise_hyper_ad), Ise_hyper_ad[:, id_Ise])
-save_file(path, varname(Ise_hyper_ap), Ise_hyper_ad[:, id_Ise])
+save_file(path, varname(Ise_hyper_ap), Ise_hyper_ap[:, id_Ise])
 save_file(path, varname(Ise_hyper_aph), Ise_hyper_aph[:, id_Ise])
 save_file(path, varname(Ise_hyper_ay), Ise_hyper_ay[:, id_Ise])
 save_file(path, varname(Ise_hyper_Rrs), Ise_hyper_Rrs[:, id_Ise])
@@ -854,8 +854,8 @@ save_file(path, varname(TSM_Ise), TSM_Ise[id_Ise])
 # In[ ]:
 
 
-save_file(path, varname(SGLI_Rrs_Ise_full), SGLI_Rrs_Ise_full)
-save_file(path, varname(SGLI_Rrs_Ariake_full), SGLI_Rrs_Ariake_full)
+save_file(path, varname(SGLI_Rrs_Ise_full), SGLI_Rrs_Ise_full[id_Ise, :])
+save_file(path, varname(SGLI_Rrs_Ariake_full), SGLI_Rrs_Ariake_full[id_Ariake, :])
 
 # In[ ]:
 
