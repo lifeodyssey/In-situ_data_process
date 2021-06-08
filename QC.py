@@ -13,7 +13,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 '''read in-situ data'''
-Ariake = pd.read_excel('/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/full_nozero.xlsx',
+Ariake = pd.read_excel('/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/full_nozero2.xlsx',
                        sheet_name='Ariake', header=0)
 
 Rrs_Ariake = Ariake.loc[:, 'In situ Rrs_Trios':'In situ Rrs_multi-spectral bands']
