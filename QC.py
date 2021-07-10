@@ -13,7 +13,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 '''read in-situ data'''
-Ariake = pd.read_excel('/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/full_nozero2.xlsx',
+Ariake = pd.read_excel('/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/full_nozero june.xlsx',
                        sheet_name='Ariake', header=0)
 
 Rrs_Ariake = Ariake.loc[:, 'In situ Rrs_Trios':'In situ Rrs_multi-spectral bands']
@@ -78,7 +78,7 @@ Lon_Ariake = Lon.to_numpy()
 # In[2]:
 
 
-Ise = pd.read_excel('/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/full_nozero2.xlsx',
+Ise = pd.read_excel('/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/full_nozero june.xlsx',
                     sheet_name='Ise', header=0)
 # get_ipython().run_line_magic('matplotlib', 'inline')
 
@@ -144,7 +144,7 @@ Lon_Ise = Lon.to_numpy()
 # In[3]:
 
 
-ECS = pd.read_excel('/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/full_nozero2.xlsx',
+ECS = pd.read_excel('/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/full_nozero june.xlsx',
                     sheet_name='ECS', header=0)
 
 # In[4]:
@@ -805,7 +805,7 @@ def save_file(path, filename, variable):
 # In[ ]:
 
 
-path = '/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/April26/'
+path = '/Users/zhenjia/Desktop/Project/SSTfusion/field/lab_insitu/June/'
 save_file(path, varname(Ariake_hyper_ad), Ariake_hyper_ad[:, id_Ariake])
 save_file(path, varname(Ariake_hyper_ap), Ariake_hyper_ap[:, id_Ariake])
 save_file(path, varname(Ariake_hyper_aph), Ariake_hyper_aph[:, id_Ariake])
