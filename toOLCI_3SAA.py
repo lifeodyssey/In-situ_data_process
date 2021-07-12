@@ -76,6 +76,10 @@ OLCI_Rrs_ECS = np.asarray([Rrs_ECS_full[:, find(400, ECS_wave)],
                            Rrs_ECS_full[:, find(620, ECS_wave)],
                            Rrs_ECS_full[:, find(665, ECS_wave)],
                            ])
+
+
+
+
 np.savetxt("ECS_OLCI.csv", OLCI_Rrs_ECS, delimiter=",")
 np.savetxt("Ise_OLCI.csv", OLCI_Rs_Ise, delimiter=",")
 np.savetxt("Ariake_OLCI.csv", OLCI_Rrs_Ariake, delimiter=",")
